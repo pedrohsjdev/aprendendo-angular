@@ -7,9 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   taskTitle = 'Read cup of coffee';
+  taskList = ['Read cup of coffee', 'Buy a new book', 'Read a new book'];
   isComplete = false;
   coins = 0;
   title = 'aprendendo-angular';
+  hasAdminPrivileges = false;
 
   updateTitle(newTitle: string) {
     this.taskTitle = newTitle;
@@ -21,5 +23,13 @@ export class AppComponent {
 
   updateCoins() {
     this.coins++;
+  }
+
+  addAdminPrivileges() {
+    this.hasAdminPrivileges = true;
+  }
+
+  removeAdminPrivileges() {
+    this.hasAdminPrivileges = false;
   }
 }

@@ -2,3 +2,14 @@
 <p>Title: {{ taskTitle }}</p>
 <p>Coins: {{ coins }}</p>
 <button (click)="updateCoins()">Buy a coin</button>
+<br/>
+<p>Title: testing directives</p>
+<p *ngIf="hasAdminPrivileges">Esse texto só será exibido com privilegios</p>
+<button (click)="addAdminPrivileges()">Conceder privilegios</button>
+<button (click)="removeAdminPrivileges()">Remover privilegios</button>
+<br/>
+<p>Title: rendenring</p>
+<ul class="ingredient-list">
+  <li *ngFor="let task of taskList">{{ task }}</li>
+</ul>
+<p appHighlight>Title: this have a custom directive for highlight</p>
